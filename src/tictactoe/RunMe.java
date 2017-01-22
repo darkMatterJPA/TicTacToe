@@ -27,7 +27,7 @@ public class RunMe {
        
            choice = input.nextLine().charAt(0);
            
-          while(!(choice=='1' || choice== '2'))
+          while(!(choice =='1' || choice == '2'))
             {
                 System.out.println("Error: Enter the number of your choice");
                 
@@ -49,7 +49,7 @@ public class RunMe {
                 {
                     System.out.println("Error: Enter X or O (in Caps)");
                     player1.setSymbol(input.nextLine().charAt(0));
-                    //System.out.println(player1.getSymbol());
+                    
                 }
                 
                         
@@ -87,7 +87,7 @@ public class RunMe {
                 {
                     System.out.println("Error: Enter X or O (in Caps)");
                     player1.setSymbol(input.nextLine().charAt(0));
-                    //System.out.println(player1.getSymbol());
+                    
                 }
                     
             if(player1.getSymbol()=='X')
@@ -102,7 +102,7 @@ public class RunMe {
             while(true)
                 {
                     player1.move(game);
-                    player2.move(game);
+                    player2.move(game); 
                 }
         }
         
