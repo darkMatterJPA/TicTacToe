@@ -22,6 +22,7 @@ public class ComputerPlayer extends Player {
             successfulMove = board.move(move, getSymbol());
         }
         System.out.println("Computer Player moved.");
+        board.display();
        if((board.isGameOver()|| board.isTie()))
                 {
                     System.exit(0);
