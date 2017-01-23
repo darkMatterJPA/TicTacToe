@@ -21,8 +21,8 @@ public class RunMe {
         char choice=0;
         
         
-        System.out.println("1.  Player vs. Player");
-        System.out.println("2.  Player vs. Computer");
+        System.out.println("1.  Human vs. Human");
+        System.out.println("2.  Human vs. Computer");
         System.out.println("Enter the number of your choice");
        
            choice = input.nextLine().charAt(0);
@@ -40,8 +40,8 @@ public class RunMe {
             {
                 Player player1 = new HumanPlayer();
                 Player player2 = new HumanPlayer();
-                System.out.println("Player vs. Player");
-                System.out.println("Enter the name for player1");
+                System.out.println("Human vs. Human");
+                System.out.println("Enter the name for Human");
                 player1.setName(input.nextLine());
                 System.out.println("Enter X or O (in Caps)");
                 player1.setSymbol(input.nextLine().charAt(0));
@@ -53,7 +53,7 @@ public class RunMe {
                 }
                 
                         
-                System.out.println("Enter the name for player2");
+                System.out.println("Enter the name for Human");
                 player2.setName(input.nextLine());
                 
                 if(player1.getSymbol()=='X')
@@ -77,8 +77,8 @@ public class RunMe {
         {
             Player player1 = new HumanPlayer();
             Player player2 = new ComputerPlayer();
-            System.out.println("Player vs. Computer");
-            System.out.println("Enter the name for player1");
+            System.out.println("Human vs. Computer");
+            System.out.println("Enter the name for Human");
             player1.setName(input.nextLine());
             System.out.println("Enter X or O");
             player1.setSymbol(input.nextLine().charAt(0));
