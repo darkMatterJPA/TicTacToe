@@ -34,15 +34,18 @@ public class HumanPlayer extends Player {
         }
         
         System.out.println(super.getName()+ ", where would you like to move? (enter a number 1-9)");
-         int space = input.nextInt();
+         char space = input.nextLine().charAt(0);
          
-         
-        while(!(board.move(space, getSymbol())))
-        {
+         boolean unsuccessfulMove = board.move(space, getSymbol());
+               
+        
+        while (!unsuccessfulMove) {
+            
             System.out.println("Error, Try again");
             
             System.out.println(super.getName()+ ", where would you like to move? (enter a number 1-9)");
-            space = input.next().charAt(0); 
+            space = input.nextLine().charAt(0);
+            unsuccessfulMove = board.move(space, getSymbol());
         }
         
         

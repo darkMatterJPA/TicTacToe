@@ -32,7 +32,18 @@ public class TicTacToe {
         return false;
     }
     
-    public boolean move(int square, char symbol) {
+    public boolean move(char square, char symbol) {
+        // figure out row and col
+        // square = 1, 4, 7 => col = 0
+        // square = 2, 5, 8 => col = 1
+        // square = 3, 6, 9 => col = 2
+        
+        int row = (Character.getNumericValue(square) - 1) / 3;
+        int col = (Character.getNumericValue(square) - 1) % 3;
+        return move(row, col, symbol);
+    }
+    
+     public boolean move(int square, char symbol) {
         // figure out row and col
         // square = 1, 4, 7 => col = 0
         // square = 2, 5, 8 => col = 1
